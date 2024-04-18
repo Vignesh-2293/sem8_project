@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Mart Sales Prediction</title>
+  
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    p {
+      font-size: 22px;
+    }
+    body {
+      background-image: url("/static/big_mart.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
+    }
+    /* Reduce the size of input elements */
+    .form-control {
+      font-size: 14px;
+      padding: 0.375rem 0.75rem;
+    }
+    /* Add transparency to the form container */
+    .container {
+      background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency by changing the alpha value */
+      border-radius: 10px; /* Optional: Add rounded corners */
+      padding: 20px; /* Optional: Add padding to the container */
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">BigMart Prediction</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/predpage">Predictions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<h1 style="text-align: center;margin-top: 35px;">Big Mart Sales Prediction</h1>
+<div class="container mt-5">
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>Item Weight:</label>
+            <input type="text" class="form-control" name="iw" required>
+        </div><br/>
+
+        <div class="form-group">
+            <label>Item Fat Content :</label>
+            <select class="form-control" name="ifc" required>
+                <option value="0">Low Fat</option>
+                <option value="1">Regular</option>
+            </select>
+        </div><br/>
+
+        <div class="form-group">
+            <label>Item Visibility:</label>
+            <input type="text" class="form-control" name="iv" required>
+        </div><br/>
+
+        <div class="form-group">
+            <label>Item Type :</label>
+            <select class="form-control" name="it" required>
+                <option value="0">Baking Goods</option>
+                <option value="1">Breads</option>
+                <option value="2">Breakfast</option>
+                <option value="3">Canned</option>
+                <option value="4">Dairy</option>
+                <option value="5">Frozen Foods</option>
+                <option value="6">Fruits and Vegetables</option>
+                <option value="7">Hard Drinks</option>
+                <option value="8">Health and Hygiene </option>
+                <option value="9">Household</option>
+                <option value="10">Meat</option>
+                <option value="11">Others</option>
+                <option value="12">Seafood</option>
+                <option value="13">Snack Foods</option>
+                <option value="14">Soft Drinks</option>
+                <option value="15">Starchy Foods</option>
+            </select>
+        </div><br/>
+
+        <div class="form-group">
+            <label>Item MRP:</label>
+            <input type="text" class="form-control" name="mrp" required>
+        </div><br/>
+
+        <div class="form-group">
+            <label>Outlet Size :</label>
+            <select class="form-control" name="os" required>
+                <option value="0">High</option>
+                <option value="1">Medium</option>
+                <option value="2">Small</option>
+            </select>
+        </div><br/>
+
+        <div class="form-group">
+            <label>Outlet Age :</label>
+            <input type="text" class="form-control" name="oa" required>
+        </div><br/>
+
+        <div class="form-group">
+            <label>Outlet Location Type :</label>
+            <select class="form-control" name="olt" required>
+                <option value="0">Tier1</option>
+                <option value="1">Tier2</option>
+                <option value="2">Tier3</option>
+            </select>
+        </div><br/>
+
+        <div class="form-group">
+            <label>Outlet Type :</label>
+            <select class="form-control" name="ot" required>
+                <option value="0">Grocery Store</option>
+                <option value="1">Supermarket Type1</option>
+                <option value="2">Supermarket Type2</option>
+                <option value="3">Supermarket Type3</option>
+            </select>
+        </div><br/><br/>
+
+        <button style="position: relative;" type="submit" class="btn btn-primary">Submit</button>
+
+        <br/><br/><br/><br/>
+    </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

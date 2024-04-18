@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigMart Sales Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles can go here */
+        body {
+            background-image: url("/static/bm.jpg");
+            background-size: cover;
+            background-repeat: no-repeat; /* This will prevent the background image from repeating */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(242, 242, 242, 0.8); /* Adjust transparency by changing the alpha value */
+            color: #000; /* Set text color to black */
+        }
+        p{
+            font-size:large;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: black;
+        }
+        .content {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        .features {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .feature {
+            width: 30%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .feature h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">BigMart Prediction</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/predpage">Predictions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Welcome to BigMart Sales Prediction</h1>
+    
+    <div class="content">
+        <p>BigMart Sales Prediction is a project aimed at forecasting the sales of various products across different stores of BigMart.</p>
+        <p>Our predictive models utilize advanced machine learning algorithms to analyze historical sales data and predict future sales trends.</p>
+        <img src="/static/sales_img.jpg" height="300px" width="500px" alt="Sales Prediction Image">
+        
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <h2 style="text-align: center;">Accurate Predictions</h2>
+            <p>Our models are trained on extensive historical data, ensuring accurate sales predictions.</p>
+        </div>
+        <div class="feature">
+            <h2 style="text-align: center;">User-Friendly Interface</h2>
+            <p>Our platform offers an intuitive interface for easy navigation and data analysis.</p>
+        </div>
+        
+    </div>
+</div>
+
+<!-- Bootstrap JS (Optional) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

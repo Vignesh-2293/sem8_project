@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
+  <style>
+    body {
+      background-image: url("{{ url_for('static', filename='bigmart.jpg') }}");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family:'Courier New', Courier, monospace;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin-top: 250px;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(220, 235, 5, 0.1);
+    }
+    h1 {
+      color: #f010ec;
+      font-weight: bolder;
+      text-align: center;
+    }
+    .result {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body style="background-color: black;">
+  <div class="container">
+    <h1>Prediction Result</h1>
+    <div class="result">
+      <h2>$ {{ res }}</h2>
+      <!-- Add additional details or description here -->
+      <p>Here is the prediction result.</p>
+    </div>
+  </div>
+</body>
+</html>
